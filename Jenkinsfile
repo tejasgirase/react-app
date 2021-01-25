@@ -10,7 +10,7 @@ pipeline {
                 echo 'API Call'
 
                 script { 
-                    def response = httpRequest "http://httpbin.org/response-headers?param1=${param1}"
+                    def response = httpRequest "http://localhost:3000/users/"
                     println('Status: '+response.status)
                     println('Response: '+response.content)
                 }
