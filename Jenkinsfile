@@ -2,7 +2,13 @@ pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr: '15'))
     }
-    agent none
+
+    agent {
+        node {
+            label 'docker'
+        }
+    }
+
     
     stages {
        stage('NPM Dependency Install') {
