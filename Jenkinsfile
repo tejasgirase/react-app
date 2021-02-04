@@ -8,6 +8,17 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '15'))
     }
     agent any
+
+    stages {
+        stage ('Run only if approval exists') {
+            when {
+                expression { js.buildIsUatApproved() }
+            }
+            steps {
+                echo "The build has been approved!!!"
+            }
+        }
+    }
     
     stages {
        stage('NPM Dependency Install') {
