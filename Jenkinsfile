@@ -19,10 +19,7 @@ pipeline {
 
        stage('NPM Dependency Install') {
             steps {
-                sh '''
-                    npm install
-                    npm run build
-                    '''           
+                cmd('npm run install')      
             }
         }        
     }
