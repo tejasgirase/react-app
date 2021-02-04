@@ -18,9 +18,12 @@ pipeline {
         }
 
        stage('NPM Dependency Install') {
-           steps {
-                echo 'API Call'
-           }
+            steps {
+                sh '''
+                    npm install
+                    npm run build
+                    '''           
+            }
         }        
     }
 }
