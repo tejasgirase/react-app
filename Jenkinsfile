@@ -1,3 +1,6 @@
+@Library('shared-jenkins-lib@master')
+log.info 'starting'
+
 pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr: '15'))
@@ -12,7 +15,7 @@ pipeline {
                 script { 
                     def response = httpRequest "http://localhost:3000/users/"
                     println('Status: '+response.status)
-                    println('Response: '+response.content)
+                    println('Response: '+response.]
                 }
            }
         }        
