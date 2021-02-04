@@ -11,10 +11,8 @@ pipeline {
 
     stages {
         stage ('Run only if approval exists') {
-            when {
-                expression { js.buildIsUatApproved() }
-            }
             steps {
+                js.buildIsUatApproved()
                 echo "The build has been approved!!!"
             }
         }
