@@ -19,7 +19,7 @@ pipeline {
 
        stage('NPM Dependency Install') {
             steps {
-                cmd('node --version')   
+                cmd('dir')   
             }
         }        
     }
