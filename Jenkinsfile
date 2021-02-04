@@ -1,5 +1,5 @@
 @Library('shared-jenkins-lib@master')
-log.info 'starting'
+org.foo.Js
 
 pipeline {
     options {
