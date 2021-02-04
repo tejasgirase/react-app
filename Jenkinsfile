@@ -18,11 +18,6 @@ pipeline {
        stage('NPM Dependency Install') {
            steps {
                 echo 'API Call'
-
-                script { 
-                    // def response = httpRequest "http://localhost:3000/users/"
-                    // println('Status: '+response.status)
-                }
            }
         }        
     }
