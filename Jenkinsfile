@@ -17,7 +17,6 @@ pipeline {
                 script { 
                     def response = httpRequest "http://localhost:3000/users/"
                     println('Status: '+response.status)
-                    println('Response: '+response.]
                 }
            }
         }        
