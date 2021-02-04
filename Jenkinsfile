@@ -18,9 +18,7 @@ pipeline {
                 echo "The build has been approved!!!"
             }
         }
-    }
     
-    stages {
        stage('NPM Dependency Install') {
            steps {
                 echo 'API Call'
