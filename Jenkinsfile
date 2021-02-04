@@ -1,7 +1,5 @@
-@Library('shared-jenkins-lib')
+@Library('shared-jenkins-lib') _
 
-import org.foo.js
-def js = new js()
 
 pipeline {
     options {
