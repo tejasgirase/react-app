@@ -1,6 +1,8 @@
 @Library('shared-jenkins-lib') _
 
 
+evenOrOdd(0)
+
 pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr: '15'))
@@ -8,7 +10,6 @@ pipeline {
     agent any
 
     stages {
-        evenOrOdd(0)
         stage ('Run only if approval exists') {
             steps {
                 sayHello 'tejas'
