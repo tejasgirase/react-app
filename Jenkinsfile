@@ -1,7 +1,7 @@
 @Library('shared-jenkins-lib') _
 
 
-evenOrOdd(0)
+// evenOrOdd(0)
 
 pipeline {
     options {
