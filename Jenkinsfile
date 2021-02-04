@@ -19,7 +19,7 @@ pipeline {
 
        stage('NPM Dependency Install') {
             steps {
-                cmd('npm run install')      
+                cmd('node --version')   
             }
         }        
     }
