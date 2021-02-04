@@ -1,4 +1,4 @@
-@Library('shared-jenkins-lib@master')
+@Library('shared-jenkins-lib')
 
 import org.foo.js
 def js = new js()
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage ('Run only if approval exists') {
             steps {
-                sayHallo()
+                sayHallo 'tejas'
                 echo "The build has been approved!!!"
             }
         }
